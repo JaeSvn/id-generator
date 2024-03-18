@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random ID Generator</title>
+  </head>
+  <body>
+    <span id="id"></span>
+  </body>
+  <script>
+    var spanId = document.getElementById("id");
+    spanId.textContent = generateUniqueId();
+
+    function generateUniqueId() {
+      const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
+      let id = "";
+      const charactersLength = characters.length;
+      for (let i = 0; i < 11; i++) {
+        id += characters.charAt(Math.floor(Math.random() * charactersLength));
+      }
+      return id;
+    }
+  </script>
+</html>
